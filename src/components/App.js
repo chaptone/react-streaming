@@ -14,7 +14,7 @@ const App = () => {
     <Layout>
       <BrowserRouter>
         <Header />
-        <Layout.Content>
+        <Layout.Content style={{ padding: "50px" }}>
           <Route path="/" exact component={StreamList} />
           <Route path="/stream/new" exact component={StreamCreate} />
           <Route path="/stream/edit" exact component={StreamEdit} />
