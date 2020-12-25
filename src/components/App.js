@@ -16,10 +16,10 @@ const App = () => {
         <Header />
         <Layout.Content style={{ padding: "50px" }}>
           <Route path="/" exact component={StreamList} />
-          <Route path="/stream/new" exact component={StreamCreate} />
-          <Route path="/stream/edit" exact component={StreamEdit} />
-          <Route path="/stream/delete" exact component={StreamDelete} />
-          <Route path="/stream/show" exact component={StreamShow} />
+          <Route path="/streams/new" exact component={StreamCreate} />
+          <Route path="/streams/edit" exact component={StreamEdit} />
+          <Route path="/streams/delete" exact component={StreamDelete} />
+          <Route path="/streams/show" exact component={StreamShow} />
         </Layout.Content>
       </BrowserRouter>
     </Layout>
