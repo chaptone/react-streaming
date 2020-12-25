@@ -1,6 +1,9 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Input, Form, Button } from "antd";
+import { connect } from "react-redux";
+
+import { createStream } from "../../actions";
 
 const renderInput = ({ input, label, meta }) => {
   const isError = ({ error, touched }) => {
@@ -31,10 +34,13 @@ const validate = ({ title, description }) => {
   return errors;
 };
 
-const StreamCreate = ({ handleSubmit }) => {
+const StreamCreate = ({ handleSubmit, createStream }) => {
+  const onSubmit = formValue => {
+    createStream(formValue);
+  };
   return (
     <Form
-      onFinish={handleSubmit(formValue => console.log(formValue))}
+      onFinish={handleSubmit(onSubmit)}
       wrapperCol={{ span: 24 }}
       layout="vertical"
       name="basic"
@@ -54,7 +60,9 @@ const StreamCreate = ({ handleSubmit }) => {
   );
 };
 
-export default reduxForm({
+const formWrapped = reduxForm({
   form: "streamCreate",
   validate,
 })(StreamCreate);
+
+export default connect(null, { createStream })(formWrapped);
