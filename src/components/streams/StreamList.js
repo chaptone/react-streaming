@@ -10,7 +10,9 @@ const renderAdmin = (stream, userId) => {
   if (stream.userId === userId) {
     return (
       <Space size="small" style={{ float: "right" }}>
-        <Button type="primary">Edit</Button>
+        <Button type="primary">
+          <Link to={`/streams/edit/${stream.id}`}>Edit</Link>
+        </Button>
         <Button type="primary" danger>
           Delete
         </Button>
