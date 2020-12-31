@@ -14,7 +14,7 @@ const renderAdmin = (stream, userId) => {
           <Link to={`/streams/edit/${stream.id}`}>Edit</Link>
         </Button>
         <Button type="primary" danger>
-          Delete
+          <Link to={`/streams/delete/${stream.id}`}>Delete</Link>
         </Button>
       </Space>
     );
