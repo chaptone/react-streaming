@@ -55,7 +55,11 @@ const StreamList = () => {
           <List.Item>
             <List.Item.Meta
               avatar={<DesktopOutlined />}
-              title={<a href="">{item.title}</a>}
+              title={
+                <a href="">
+                  <Link to={`/streams/${item.id}`}>{item.title}</Link>
+                </a>
+              }
               description={item.description}
             />
             {renderAdmin(item, userId)}
