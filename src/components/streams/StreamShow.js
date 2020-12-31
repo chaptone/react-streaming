@@ -30,7 +30,7 @@ const StreamShow = () => {
     }
     playerRef.current = flv.createPlayer({
       type: "flv",
-      url: `http://localhost:8000/live/${id}.flv`,
+      url: `${process.env.REACT_APP_RTMP_SERVER_URL}/live/${id}.flv`,
     });
     playerRef.current.attachMediaElement(videoRef.current);
     playerRef.current.load();
