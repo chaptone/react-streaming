@@ -1,9 +1,9 @@
 # Requirement
-## 1. Google API key \
+## 1. Google API key
 API reading https://console.developers.google.com
-## 2. Backend Server \
+## 2. Backend Server
 Recommend using Json server https://github.com/chaptone/json-server-playground
-## 3. RTMP Server \
+## 3. RTMP Server
 Simple RTMP Server https://github.com/chaptone/rtmp-server \
 Document for RTMP Server https://www.npmjs.com/package/node-media-server
 
