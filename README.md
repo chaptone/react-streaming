@@ -1,3 +1,12 @@
+# Requirement
+## 1. Google API key \
+API reading https://console.developers.google.com
+## 2. Backend Server \
+Recommend using Json server https://github.com/chaptone/json-server-playground
+## 3. RTMP Server \
+Simple RTMP Server https://github.com/chaptone/rtmp-server \
+Document for RTMP Server https://www.npmjs.com/package/node-media-server
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
